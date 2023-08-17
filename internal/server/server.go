@@ -10,10 +10,10 @@ type HttpServer struct {
 	Server *http.Server
 }
 
-func InitServer(handler http.Handler) *HttpServer {
+func InitServer(port string, handler http.Handler) *HttpServer {
 	return &HttpServer{
 		Server: &http.Server{
-			Addr:         ":8080",
+			Addr:         ":" + port,
 			WriteTimeout: 10 * time.Second,
 			ReadTimeout:  10 * time.Second,
 			Handler:      handler,
