@@ -1,8 +1,9 @@
 port: 8080
 db:
-  type: "postgresql"
-  dataSource: "localhost:5432/golang?sslmode=disable"
-  driver: "postgres"
-  filePath: "db/migrations"
-  username: "postgres"
+  host: "localhost"
+  port: "5432"
+  user: "postgres"
   password: "postgres"
+  dbname: "golang"
+  sslmode: "disable"
+  filePath: "db/migrations"
